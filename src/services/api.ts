@@ -7,7 +7,10 @@ const CATAAS_BASE_URL = 'https://cataas.com';
 
 export const fetchCats = async (limit: number = 20): Promise<Cat[]> => {
     try {
-        const response = await fetch(`${CATAAS_BASE_URL}/api/cats?limit=${limit}&skip=0`);
+        // Randomize skip parameter to get different cats each time
+        // We assume there are at least 500 cats.
+        const randomSkip = Math.floor(Math.random() * 500);
+        const response = await fetch(`${CATAAS_BASE_URL}/api/cats?limit=${limit}&skip=${randomSkip}`);
         if (!response.ok) {
             throw new Error(`Failed to fetch cats: ${response.statusText}`);
         }
