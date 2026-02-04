@@ -1,0 +1,54 @@
+.card-container {
+    width: 90%;
+    max-width: 400px;
+    /* Max width for larger screens */
+    height: 60vh;
+    position: relative;
+    /* Changed from absolute */
+    /* Removed top, left, transform - handled by flex parent */
+    border-radius: 20px;
+    background: var(--color-card-bg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    touch-action: none;
+    transform-origin: 50% 100%;
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 20px;
+    padding: 8px 16px;
+    border: 4px solid;
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+
+.overlay-like {
+    left: 20px;
+    color: var(--color-like);
+    border-color: var(--color-like);
+    transform: rotate(-15deg);
+}
+
+.overlay-dislike {
+    right: 20px;
+    color: var(--color-dislike);
+    border-color: var(--color-dislike);
+    transform: rotate(15deg);
+}

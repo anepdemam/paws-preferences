@@ -1,0 +1,45 @@
+:root {
+  --color-bg: #0f172a;
+  --color-card-bg: #1e293b;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-accent: #6366f1;
+  --color-accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --color-like: #22c55e;
+  --color-dislike: #ef4444;
+
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* changed from center to flex-start to allow scrolling from top */
+  /* overflow: hidden; Removed to allow scrolling */
+}
+
+#root {
+  width: 100%;
+  max-width: 480px;
+  /* Mobile width cap */
+  min-height: 100vh;
+  /* Changed from height to min-height */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
